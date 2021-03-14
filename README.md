@@ -2,9 +2,14 @@
 composer install
 npm install
 
-# create .env file and generate the application key
-cp .env.example .env
-php artisan key:generate
+# create database
+create database named 'laravel-test'
+
+# generate tables
+run 'php artisan migrate' to add tables to the database
+
+# add data to tables
+run 'php artisan db:seed' to add data to the tables
 
 # run the application
-php artisan serve
+run 'php artisan serve' to run the application
